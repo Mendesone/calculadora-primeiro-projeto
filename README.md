@@ -1,2 +1,2 @@
-# calculadora primeiro projeto
+# calculadora - primeiro projeto
  primeiro repósitório versionado
