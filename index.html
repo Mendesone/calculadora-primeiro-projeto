@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="icon" type="image/ico" href="assets/Group-2-_2_.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="name"> Andressa Mendes</h1>
+        <p class="text">Olá! aqui você poderá realizar calculos simples!<br>
+                        lembre de ultilizar "<" para aparagr apaenas um dado.</p>
+<img src="assets/Group 2 (1) (1).png" alt="foto pessoal ">
+    </header>
+    <div class="calc">
+        <h2 class="title"> Calculadora</h2>
+        <p id="result"> </p>
+        <table >
+           <tr>
+            <td><button class="button" onclick="clean()">C</button></td>
+            <td ><button class="button" onclick="back()"><</button></td>
+            <td ><button class="button" onclick="insert('/')">/</button></td>
+            <td ><button class="button" onclick="insert('*')">*</button></td>
+           </tr>
+
+           <tr>
+            <td ><button class="button" onclick="insert('7')">7</button></td>
+            <td ><button class="button" onclick="insert('8')">8</button></td>
+            <td ><button class="button" onclick="insert('9')">9</button></td>
+            <td ><button class="button" onclick="insert ('-')">-</button></td>
+           </tr>
+
+           <tr>
+            <td ><button class="button" onclick="insert('4')">4</button></td>
+            <td ><button class="button" onclick="insert('5')">5</button></td>
+            <td ><button class="button" onclick="insert('6')">6</button></td>
+            <td ><button class="button" onclick="insert('+')">+</button></td>
+           </tr>
+           <tr>
+            <td ><button class="button" onclick="insert('1')">1</button></td>
+            <td ><button class="button" onclick="insert('2')">2</button></td>
+            <td ><button class="button" onclick="insert('3')">3</button></td>
+            <td rowspan="2"><button class="button" style="height : 106px;" onclick="calc()">=</button></td>
+           </tr>
+           <tr>
+            <td  colspan="2"><button class="button" style="width:106px;" onclick="insert('0')">0</button></td>
+            <td><button class="button" onclick="insert('.')">.</button></td>
+           </tr>
+        </table>
+    </div>
+
+    <script>
+        function insert(num){
+        var numero = document.getElementById('result').innerHTML 
+        document.getElementById('result').innerHTML = numero + num;
+   }
+   function clean(){
+    document.getElementById('result').innerHTML= "";
+   }
+
+   function back(){
+    var resultado = document.getElementById('result').innerHTML;
+    document.getElementById('result').innerHTML = resultado.substring(0, resultado.length -1);//apagar apenas um elemento
+   }
+
+   function calc(){
+    var resultado = document.getElementById('result').innerHTML;
+    
+    if (resultado){
+       document.getElementById('result').innerHTML = eval(resultado);
+    }
+    else {
+        document.getElementById('result').innerHTML = "nenhum dado adicionado";
+
+    }
+   }
+   </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2? family= Keania+One & display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: #D9D9D9;
+    height: 100vh;
+    color: #593E25;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 1px;
+    
+
+}
+.name{
+    margin: 1px;
+    padding: 30px;
+    font-family:'Keania One', cursiva;
+    font-size: 50px;
+}
+
+.title{
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.text{
+    margin: 30px;
+    padding-bottom: 1;
+ 
+}
+
+.calc{
+position: absolute;
+background-color: rgba(0, 0, 0, 0.75);
+top: 40%;
+left: 70%;
+transform: translate(-50%, -50%);
+border-radius: 15px;
+padding: 15px;
+}
+.button{
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: rgba(14, 13, 13, 0.733);
+    border: none;
+    color: #D9D9D9;
+}
+
+.button:hover{
+    background-color: black;
+
+
+}
+
+#result{
+    background: #D9D9D9;
+    width: 200px;
+    height: 30px;
+    margin: 15px;
+    font-size: 25px;
+    color: black;
+    text-align: right;
+    padding: 5px;
+}
+
